@@ -1,0 +1,764 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inter:wght@100..900&display=swap');
+/* set global variables which will be used most */
+:root{
+    --main-color:#75CACA;
+    --black-color:#282727;
+    --white-color:#FFFFFF;
+    --inder-font:"Inder", sans-serif;
+}
+/* set the elements to zero padding and margin , as some elements have values in that */
+*, p, h1, h2, h3, h5, ul{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* grouped the patterns pieces in figma and used the group one which is one picture in the background of the body */
+body{
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    overflow-x: hidden;
+}
+/* student impact page is larger than others so grouped all its patterns in a new group and used it */ 
+body.studentImpactPage{
+    background-image: url(../images/studentImpactBg.png);
+    background-size: cover;
+}
+/* the scroll bar change color */
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background-color: #3D3D3D;
+}
+/* reset the value of the main container used in html */
+.container-fluid{
+    padding: 0 42px;
+}
+/* Common Classes & Elements */
+h1{
+    font-size: 40px;
+    color: var(--white-color);
+    font-weight: 700;
+    line-height: 48.41px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white-color);
+}
+h3, .common-text, .main-btn{
+    font-size: 24px;
+    line-height: 29.05px;
+    color: var(--white-color);
+    font-style: normal;
+}
+h3{
+    font-weight: 700;
+}
+/* main-btn */
+.main-btn{
+    background-color: var(--main-color);
+    padding: 20px 52px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: block;
+    overflow: hidden;
+    width: fit-content;
+}
+.main-btn:hover{
+    color: var(--white-color);
+}
+/* header */
+header nav, header section{
+    z-index: 3;
+    position: relative;
+}
+.hero-img{
+    position: relative;
+    z-index: 1000;
+}
+.header-pattern{
+    z-index: 2;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.second-section{
+    height: 100%;
+    z-index: 1000;
+}
+.home-header{
+    height: 100%;
+    z-index: 10;
+}
+.header-overlay{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 654px;
+    left: 0;
+    z-index: -1;
+}
+.header-pic{
+    background-image: url(../images/Group\ 14294\ \(2\).png);
+    z-index: 2;
+    height: 654px;
+    width: 100%;
+}
+.navbar{
+    z-index: 1000000;
+    min-height: 79px;
+}
+.navbar-nav{
+    gap: 10px;
+}
+.nav-link{
+    font-size: 20px;
+    padding: 12px 10px;
+    color: #212121!important;
+    font-weight: 700;
+    letter-spacing: -0.019em;
+}
+.nav-link.active{
+    background-color: #3D3D3D;
+    color: var(--white-color) !important;
+}
+/*content */
+.content{
+    background-color: #3D3D3D;
+    position: relative;
+    z-index: 1;
+}
+.card-container{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 24px;
+    min-height: 208.06px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-container img{
+    border-radius: 8px;
+}
+.home-footer{
+    position: relative;
+    z-index: 100;
+}
+.home-footer h3:nth-child(2){
+    margin-top: 42px;
+}
+.hero-section img{
+    position: relative;
+    z-index: 999;
+}
+/* Request Page*/
+.branch_hero{
+    margin-top: 57px;
+}
+.branch_hero_img{
+    margin-bottom: 17px;
+}
+.sub_header{
+    margin-bottom: 38px;
+}
+.sub_header a{
+    color: var(--white-color);
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+}
+a.backLink{
+    font-weight: 700;
+    display: inline-block;
+    width: 40%;
+}
+.branch_page{
+    min-height: 100vh;
+}
+.branch_content{
+    background-color: #3D3D3D;
+    color: var(--white-color);
+    padding: 50px 65px 52px;
+}
+.branch_content.pick_content{
+    padding-bottom: 8px;
+}
+.branch_content > p:first-of-type{
+    margin-bottom: 48px;
+}
+.branch-footer{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #3D3D3D;
+}
+.branch_content > h3{
+    margin-top: 48px;
+}
+.branch_content h3 span{
+font-weight: 400;
+}
+.request_content li span{
+    font-style: italic;
+}
+/* form */
+.request_content form{
+    margin-top: 48px;
+}
+.form-control{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: var(--white-color)!important;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+select option{
+    color: #ffffffd1!important;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.022em;
+    background-color: #3D3D3D;
+}
+.form-control:focus{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #FFFFFF;
+}
+textarea{
+    height: 109px;
+}
+.form-control::placeholder{
+    color: #ffffffd1!important;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.022em;
+}
+.drop-arrow{
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form-label{
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 22.5px;
+    letter-spacing: -0.022em;
+}
+span.error{
+    display: none;
+}
+form div{
+    margin-bottom: 31px;
+}
+/* guide*/
+.card-container + h3{
+    font-weight: 400;
+    line-height: 38.73px;
+}
+.guide_content .card-container{
+    margin-bottom: 12px;
+}
+.guide_content h2{
+    font-size: 36px;
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+.pick_content h2{
+    font-size: 40px;
+    margin-bottom: 48px;
+    line-height: 48.41px;
+}
+.guide_content{
+    margin-bottom: 60px;
+}
+.card-btn{
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+    font-family: var(--inder-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    cursor: pointer;
+    /* width: 18%; */
+    width: 148px;
+    height: 148px;
+}
+.discuss-cards .card-btn{
+    background-color: #CDBC2A;
+}
+.quiz-cards .card-btn{
+    background-color: #52ABD3;
+}
+.artdraw-cards .card-btn{
+    background-color: #BC7DB2;
+}
+.isit-cards .card-btn{
+    background-color: #E37E2C;
+}
+.truefalse-cards .card-btn{
+    background-color: #E4504C;
+}
+.card-text{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    color: #000000;
+    padding: 42px 45px 27px 37px;
+}
+.card-text ul{
+    margin-left: 30px;
+}
+.card-text h5{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+}
+.card-text p{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24.2px;
+}
+.cart-text-row{
+    margin-bottom: 36px;
+}
+.card-text h5:not(:first-child){
+    margin-top: 32px;
+}
+.card-text li{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.2px;
+    word-wrap: break-word;
+}
+.card-text li a{
+    color: #000000;
+}
+.card-text h5 span{
+    font-weight: 400;
+}
+.card-text 
+.card-btn.active{
+    background-color: var(--white-color);
+    color: #333333;
+}
+.card-box{
+    display: none;
+}
+.card-row{
+    margin-bottom: 44px;
+}
+.sub_header.discuss-sub-header{
+    margin-top: 46px;
+    margin-bottom: 49px;
+}
+.contact_content{
+    margin-top: 38px;
+    margin-bottom: 50px;
+}
+/* Student Impact Page */
+.video{
+    margin-top: 60px;
+    margin-bottom: 55px;
+}
+.student-content{
+    font-style: italic;
+}
+.student-content > h1{
+    font-style: italic;
+    max-width: 792px;
+    margin: 0 auto 71px;
+}
+.card-sample{
+    margin-bottom: 75px;
+}
+.card-sample .sample-text{
+    margin-bottom: 0;
+}
+.student-content .student-row > div{
+    margin-bottom: 71px;
+}
+.student-content .student-row h1{
+    margin-bottom: 32px;
+    line-height: 48.41px;
+    font-style: normal;
+}
+.student-content .student-row h1, .student-content .student-row p{
+    font-weight: 500;
+}
+.student-content .student-row p{
+    font-style: italic;
+}
+.sample-text h3{
+    margin-bottom: 32px;
+}
+.sample-text h3 span{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19.36px;
+}
+.sample-text p span{
+    font-style: italic;
+}
+.students_can{
+    margin-bottom: 71px;
+}
+.student-content ul{
+    margin-left: 30px;
+}
+.box-included .row{
+    margin-bottom: 52px;
+}
+.box-included h3{
+    font-weight: 700;
+}
+.box-included h3 span{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19.36px;
+}
+.student-content .main-btn{
+    max-width: 402px;
+    text-align: center;
+    margin:63px auto 0;
+    padding: 10px 21px 13px 18px;
+}
+.student-content{
+    padding: 59px 38px 41px 48px;
+}
+/* for all pages except the home page , use branch header for the navbar and give fixed height*/
+/* Branch_Header */
+.branch_header{
+    height: 79px;
+}
+.branch-overlay{
+    background-image: url(../images/header_overlay.png);
+    background-size: cover;
+    background-color: #75CACA;
+}
+select{
+    background-color: transparent;
+}
+.request_content h3{
+    margin-bottom: 24px;
+}
+.sub_header{
+    position: relative;
+}
+.secondLink{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* images popup when clicking on the image */
+.img-wrapper::after {
+    font-size: 12px;
+    content: 'Click Image To View Full Size';
+    display: block;
+    margin-top: 8px;
+}
+#imgViewer{
+    text-align: center;
+}
+#imgViewer img{
+    width: 500px;
+}
+.modal-body{
+    padding-bottom: 3rem;
+} 
+.close-popup{
+    width: 32px;
+}
+.popup-img{
+    cursor: pointer;
+}
+/* Media Queries */
+@media (min-width:1600px) and (max-width:1920px) {
+    .hero-section img{
+        margin: auto;
+    }
+    .container{
+        max-width: 1056px;
+    }
+    .content{
+        margin-top: -345px;
+        padding: 245px 0px 72px;
+    }
+    /* .branch_page nav{
+        padding: 26px 0;
+    } */
+}
+@media only screen and (max-width: 1600px){
+    .content{
+        padding: 240px 0px 72px;
+        margin-top: -344px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    /* .content.container{
+        max-width: 1140px;
+    } */
+    .container{
+        max-width: 1056px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header-pic,.header-overlay{
+        height: 520px;
+    }
+    .content{
+        padding: 220px 0px 72px;
+    }
+    .card-row{
+        margin-bottom: 15px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1400px){
+    .content{
+        padding: 170px 0px 72px;
+        margin-top: -266px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .definition-text{
+        margin-bottom: 116px;
+    }
+    .definition-text .main-btn{
+        margin-top: 45px;
+    }
+    .content p{
+        max-width: 792px;
+    }
+    .content > .row:not(:last-child){
+        margin-bottom: 80px;
+    }
+    .hero-section{
+        margin-top: -120px;
+    }
+    .home-footer{
+        margin-top: 150px;
+        margin-bottom: 120px;
+    }
+    .branch_content form{
+        width: 524px;
+        /* margin-top: 48px; */
+    }
+    .mb-60{
+        margin-bottom: 60px;
+    }
+    .sample-img-container{
+        min-width:249px ;
+    }
+    .sample-text{
+        max-width: 456px;
+    }
+}
+@media only screen and (max-width:992px) {
+    .home-header{
+        display: flex;
+        flex-direction: column;
+        height: 920px;
+        gap: 8%;
+    }
+    .header-pic, .header-overlay{
+        height: 920px;
+    }
+    .second-img{
+        margin-top: -40px;
+    }
+    .content{
+        margin-top: 0;
+        padding: 80px 48px 0;
+    }
+    .content p{
+        margin-bottom: 32px;
+    }
+    .content > .row > .col-12{
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .home-footer{
+        margin: 80px;
+        text-align: center;
+    }
+    .definition-text{
+        margin-bottom: 52px;
+    }
+    .navbar-menu{
+        position: absolute;
+        background-color: #3D3D3D;
+        width: 297px;
+        height: 100vh;
+        top: 0;
+        overflow: hidden;
+        z-index: 100000;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        overflow: hidden;
+        display: none;
+        padding: 24px;
+    }
+    .nav-logo{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .navbar-menu .nav-link{
+        color: var(--white-color)!important;
+    }
+    .navbar-btn{
+        border: 0;
+    }
+    .navbar-btn img{
+        width: 42px;
+    }
+    .navbar-btn:focus{
+        border: 0;
+        box-shadow: none;
+        outline: 0;
+    }
+    .title-footer{
+        margin-bottom: 32px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .common-text, h3, .main-btn, .navbar-nav .nav-link, .sub_header a, .form-label, .form-control,
+    .form-control::placeholder{
+        font-size: 17px;
+    }
+    h2, .guide_content h2{
+        font-size: 24px;
+    }
+    h1{
+        font-size: 27px;
+        line-height: 34.41px;
+    }
+    .secondLink{
+        position: relative;
+        left: 0;
+    }
+    .student-content .main-btn{
+        padding: 12px;
+    }
+    .box-included{
+        text-align: center;
+    }
+    .request_content form{
+        margin-top: 24px;
+    }
+    .card-sample{
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .sample-text h3{
+        margin-bottom: 8px;
+        margin-top: 24px;
+    }
+    .students_can{
+        text-align: center;
+    }
+    .student-content ul{
+        margin-left: 15px;
+    }
+    .student-content .student-row h1{
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+    .student-content > h1{
+        margin-bottom: 24px;
+    }
+    .student-content > h1:not(:first-of-type){
+        margin-top: 24px;
+    }
+    .student-content .student-row > div, .students_can{
+        margin-bottom: 32px;
+    }
+    .card-container{
+        margin-bottom: 12px;
+    }
+    .main-btn{
+        padding: 12px 36px;
+    }
+    .content{
+        padding: 48px 32px 0;
+    }
+    .branch_content{
+        padding: 50px 24px;
+    }
+    .navbar-btn img{
+        width: 32px;
+    }
+    .branch_hero_img{
+        width: 250px;
+        margin: auto;
+        /* margin-top: 110px; */
+    }
+    .pick_content h2{
+        font-size: 22px;
+    }
+    .card-row{
+        margin-bottom: 0;
+    }
+    .card-btn{
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+    .cart-text-row{
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .branch_content > h3{
+        margin-top: 24px;
+    }
+    .branch_content > p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+    .card-text{
+        padding: 12px;
+    }
+    .card-text h5:not(:first-child){
+        margin-top: 18px;
+    }
+    .box-included .row{
+        margin-bottom: 1.5rem;
+    }
+    .student-content .student-row h1{
+        line-height: 34.41px;
+    }
+}
+@media (min-width:767px) and (max-width:991px) {
+    .content{
+        padding: 148px 48px 72px;
+    }
+    .card-btn{
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+
+
